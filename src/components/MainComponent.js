@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import Home from "./Home";
 import Contact from './Contact';
 import About from './About';
-import Header from './Header'
+import Header from './Header';
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 
 

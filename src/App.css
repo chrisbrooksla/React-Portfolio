@@ -124,9 +124,15 @@ margin-top: 0;
 
 /* contact form */
 
-#contact {
+.card {
+  width: 500px;
+  max-width: 100%;
+}
+
+.contact-greeting {
   margin-top: 50px;
   margin-bottom: 100px;
+  display: flex;
 }
 
 .contact-info .fa {

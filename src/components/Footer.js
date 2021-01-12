@@ -49,7 +49,7 @@ function Footer(props) {
                      role="button"
                      className="btn btn-link"
                      href="mailto:notreal@notreal.co">
-                     <i className="fa fa-envelope-o" /> campsites@nucamp.co
+                     <i className="fa fa-envelope-o" /> awesome@zenithstudios.com
 						</a>
                </div>
             </div>

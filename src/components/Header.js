@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import {
    Nav,
    Navbar,
@@ -6,8 +7,6 @@ import {
    NavbarToggler,
    Collapse,
    NavItem,
-   Jumbotron,
-   Button,
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
@@ -20,73 +19,70 @@ class Header extends Component {
          isNavOpen: false,
          isModalOpen: false
       };
+
+      this.toggleNav = this.toggleNav.bind(this);
    }
 
+
+   toggleNav() {
+      this.setState({
+         isNavOpen: !this.state.isNavOpen,
+      });
+   }
 
 
    render() {
       return (
          <React.Fragment>
-            <Jumbotron fluid>
+            
+            <Navbar className="navbar navbar-expand-sm navbar-dark center"
+                     dark sticky="top" expand="md">
                <div className="container">
-                  <div className="row">
-                     <div className="col">
-                        <h1>NuCamp</h1>
-                        <h2>a better way to camp</h2>
-                     </div>
-                  </div>
-               </div>
-            </Jumbotron>
-            <Navbar dark sticky="top" expand="md">
-               <div className="container">
-                  <NavbarBrand className="mr-auto" href="/">
+                  <NavbarBrand className="navbar-brand" href="/">
                      <img
-                        src="/assets/images/logo.png"
-                        height="30"
-                        width="30"
-                        alt="NuCamp Logo"
+                        src="Assets/img/logo/logo-new.jpg"
+                       
+                        alt="Zenith Logo"
                      />
                   </NavbarBrand>
                   <NavbarToggler onClick={this.toggleNav} />
                   <Collapse isOpen={this.state.isNavOpen} navbar>
-                     <Nav navbar>
-                        <NavItem>
+                     <Nav navbar >
+                        <div className="navbar-nav navbar-left">
+                           <NavItem className="nav-item">
                            <NavLink className="nav-link" to="/home">
-                              <i className="fa fa-home fa-lg" /> Home
+                               Home
 									</NavLink>
                         </NavItem>
-                        <NavItem>
+                           <NavItem className="nav-item">
                            <NavLink className="nav-link" to="/studios">
-                              <i className="fa fa-home fa-lg" /> Studios
+                               Studios
 									</NavLink>
                         </NavItem>
-                        <NavItem>
+                           <NavItem className="nav-item">
                            <NavLink className="nav-link" to="/staff">
-                              <i className="fa fa-home fa-lg" /> Staff
+                               Staff
 									</NavLink>
-                        </NavItem>
-                        <NavItem>
+                           </NavItem>
+                        </div>
+                        <div className="navbar-nav navbar-right" >
+                           <NavItem className="nav-item">
                            <NavLink className="nav-link" to="/gallery">
-                              <i className="fa fa-list fa-lg" /> Gallery
+                               Gallery
 									</NavLink>
                         </NavItem>
-                        <NavItem>
+                           <NavItem className="nav-item">
                            <NavLink className="nav-link" to="/aboutus">
-                              <i className="fa fa-info fa-lg" /> About
+                               About
 									</NavLink>
                         </NavItem>
-                        <NavItem>
+                        <NavItem className="nav-item">
                            <NavLink className="nav-link" to="/contactus">
-                              <i className="fa fa-address-card fa-lg" /> Contact Us
+                               Contact 
 									</NavLink>
-                        </NavItem>
+                           </NavItem>
+                        </div>
                      </Nav>
-                     <span className="navbar-text ml-auto">
-                        <Button outline onClick={this.toggleModal}>
-                           <i className="fa fa-sign-in fa-lg" />
-									Login
-								</Button>
-                     </span>
                   </Collapse>
                </div>
             </Navbar> 
